@@ -15,7 +15,7 @@ const PORT = process.env.PORT || 3030;
 app.post("/refresh", (req, res) => {
   const refreshToken = req.body.refreshToken
   const spotifyApi = new SpotifyWebApi({
-    redirectUri: "http://localhost:3000",
+    redirectUri: "https://illustrious-axolotl-6314fc.netlify.app",
           clientId: process.env.CLIENT_ID,
           clientSecret: process.env.CLIENT_SECRET,
     refreshToken,
@@ -38,7 +38,7 @@ app.post("/refresh", (req, res) => {
 app.post("/login", (req, res) => {
   const code = req.body.code
   const spotifyApi = new SpotifyWebApi({
-    redirectUri: "http://localhost:3000",
+    redirectUri: "https://illustrious-axolotl-6314fc.netlify.app",
           clientId: process.env.CLIENT_ID,
           clientSecret: process.env.CLIENT_SECRET,
   })
