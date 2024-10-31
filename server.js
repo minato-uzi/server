@@ -11,6 +11,7 @@ app.use(cors())
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }))
 
+const PORT = process.env.PORT || 3030;
 app.post("/refresh", (req, res) => {
   const refreshToken = req.body.refreshToken
   const spotifyApi = new SpotifyWebApi({
@@ -55,4 +56,4 @@ app.post("/login", (req, res) => {
       res.sendStatus(400)
     })
 })
-app.listen(3001)
+app.listen(PORT)
