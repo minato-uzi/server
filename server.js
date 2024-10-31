@@ -56,4 +56,6 @@ app.post("/login", (req, res) => {
       res.sendStatus(400)
     })
 })
-app.listen(PORT)
+app.listen(PORT, () => {
+  console.log(`server started on port ${PORT}`);
+});
